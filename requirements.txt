@@ -1,12 +1,28 @@
-streamlit
-fastapi
-uvicorn
-pydantic
-sqlalchemy
-psycopg2-binary
-python-dotenv
-pytest
-PyPDF2
-pikepdf
-python-multipart
-gunicorn
+# PDF Operations
+pypdf==4.0.1
+pillow==10.2.0
+reportlab==4.0.9
+
+# Web Framework
+streamlit==1.31.0
+fastapi==0.109.0
+uvicorn==0.27.0
+
+# Database
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.25
+
+# Utilities
+python-dotenv==1.0.1
+python-multipart==0.0.6
+
+# Testing
+pytest==8.0.0
+pytest-cov==4.1.0
+
+# Code Quality
+black==24.1.1
+flake8==7.0.0
+
+safety==3.0.1
+bandit==1.7.6

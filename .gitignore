@@ -1,11 +1,31 @@
+# Python
 __pycache__/
-*.pyc
-.env
+*.py[cod]
+*$py.class
+*.so
 venv/
-.env.*.local
-.DS_Store
-*.db
-uploads/
-.idea/
+env/
+
+# Environment
+.env
+*.env
+
+# IDE
 .vscode/
-    
+.idea/
+
+# Databases
+*.db
+*.sqlite
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output files
+uploads/
+outputs/
+temp/
