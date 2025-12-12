@@ -1,0 +1,12 @@
+streamlit
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+psycopg2-binary
+python-dotenv
+pytest
+PyPDF2
+pikepdf
+python-multipart
+gunicorn
