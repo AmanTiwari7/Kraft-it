@@ -1,0 +1,23 @@
+name: Simple CI  # Name shown in GitHub Actions tab
+
+on: [push, pull_request]  # Run on push or PR
+
+jobs:  # Define jobs to run
+  test:  # Job name
+    runs-on: ubuntu-latest  # Use Ubuntu Linux VM
+    
+    steps:  # Sequential steps
+    - uses: actions/checkout@v4  # Clone the repo
+    
+    - name: Set up Python  # Step name
+      uses: actions/setup-python@v5  # Install Python action
+      with:
+        python-version: '3.10'  # Use Python 3.10
+    
+    - name: Install dependencies
+      run: |  # Run shell commands
+        pip install -r requirements.txt  # Install packages
+        pip install pytest  # Install test framework
+    
+    # - name: Run tests
+    #   run: pytest tests/  # Execute all tests
