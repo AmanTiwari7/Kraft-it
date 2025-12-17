@@ -125,5 +125,7 @@ if __name__ == "__main__":
         host=HOST,
         port=PORT,
         reload=True,  # Auto-reload on code changes (dev only)
+        reload_dirs=["api", "kraft_it"],  # Only watch these folders
+        reload_excludes=["*.pyc", "__pycache__"],  # Ignore these
         log_level="debug"
     )
