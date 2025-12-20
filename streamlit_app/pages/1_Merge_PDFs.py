@@ -58,9 +58,10 @@ if uploaded_files:
                     # response = requests.post(
                     #     'http://localhost:8000/api/merge',
                     #     files=files
-                    # )
+                    # ) 
                     
                     st.success("✅ PDFs merged successfully!")
+                    
                     st.info("🔧 Backend API integration coming soon...")
                     
                     # Placeholder download button

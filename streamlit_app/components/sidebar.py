@@ -27,24 +27,7 @@ def render_sidebar():
         - ✂️ Split PDF
         - 🗜️ Compress PDF
         - 🔄 Convert Files
-        - 📊 History
         """)
-        
-        st.markdown("---")
-        
-        # Quick stats (from session state if available)
-        st.markdown("### 📊 Session Stats")
-        
-        if 'files_processed' not in st.session_state:
-            st.session_state.files_processed = 0
-        if 'operations_count' not in st.session_state:
-            st.session_state.operations_count = 0
-        
-        col1, col2 = st.columns(2)
-        with col1:
-            st.metric("Files", st.session_state.files_processed)
-        with col2:
-            st.metric("Operations", st.session_state.operations_count)
         
         st.markdown("---")
         

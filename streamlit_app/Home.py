@@ -177,17 +177,6 @@ with col4:
     if st.button("🔄 Go to Convert Files", key="nav_convert", use_container_width=True):
         st.switch_page("pages/4_Convert_Files.py")
 
-with col5:
-    st.markdown("""
-    <div class="feature-card card-teal">
-        <h3>📊 History & Logs</h3>
-        <p>View your processing history and download previous results. Keep track of all operations.</p>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    if st.button("📊 Go to History", key="nav_history", use_container_width=True):
-        st.switch_page("pages/5_History_or_Logs.py")
-
 st.markdown("---")
 
 # How to use section
