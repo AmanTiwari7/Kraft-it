@@ -1,28 +1,73 @@
-# PDF Operations
+# requirements.txt - Updated for Django Backend
+
+# ============================================
+# CORE PDF OPERATIONS
+# ============================================
 pypdf==4.0.1
 pillow==10.2.0
 reportlab==4.0.9
+img2pdf==0.5.1
 
-# Web Framework
-streamlit==1.31.0
-fastapi==0.109.0
-uvicorn==0.27.0
+# ============================================
+# DJANGO BACKEND
+# ============================================
+Django==5.0.1
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+drf-spectacular==0.27.0  # API documentation
+python-decouple==3.8     # Environment variables
 
-# Database
+# ============================================
+# DATABASE
+# ============================================
 psycopg2-binary==2.9.9
-sqlalchemy==2.0.25
+dj-database-url==2.1.0
 
-# Utilities
+# ============================================
+# STREAMLIT FRONTEND
+# ============================================
+streamlit==1.31.0
+requests==2.31.0
+
+# ============================================
+# UTILITIES
+# ============================================
 python-dotenv==1.0.1
 python-multipart==0.0.6
 
-# Testing
-pytest==8.0.0
-pytest-cov==4.1.0
+# ============================================
+# TASK QUEUE (Optional - for async processing)
+# ============================================
+celery==5.3.6
+redis==5.0.1
 
-# Code Quality
+# ============================================
+# FILE STORAGE
+# ============================================
+django-storages==1.14.2  # For cloud storage (optional)
+
+# ============================================
+# AUTHENTICATION (Optional)
+# ============================================
+djangorestframework-simplejwt==5.3.1
+
+# ============================================
+# TESTING
+# ============================================
+pytest==8.0.0
+pytest-django==4.7.0
+pytest-cov==4.1.0
+factory-boy==3.3.0  # Test data factories
+
+# ============================================
+# CODE QUALITY
+# ============================================
 black==24.1.1
 flake8==7.0.0
+isort==5.13.2
 
-safety==3.0.1
-bandit==1.7.6
+# ============================================
+# DEVELOPMENT
+# ============================================
+django-debug-toolbar==4.2.0
+ipython==8.20.0
