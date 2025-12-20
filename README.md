@@ -1,3 +1,5 @@
+<img width="876" height="865" alt="image" src="https://github.com/user-attachments/assets/dab83727-092d-4ac7-b83a-bffa130f798d" />
+
 # 📄 Kraft-it - Complete PDF Manipulation Toolkit
 
 ![CI/CD Pipeline](https://github.com/YourUsername/Kraft-it/workflows/Simple%20CI/badge.svg)
