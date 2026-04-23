@@ -21,7 +21,6 @@ def api_root(request):
     })
 
 def health_check(request):
-    """Health check endpoint"""
     return JsonResponse({"status": "healthy"})
 
 def pdf_api(req):
@@ -30,7 +29,8 @@ def pdf_api(req):
         "endpoints": {
             "health": "/health/",
             "pdf_api": "/api/pdfs/",
-            "pdf_merge":"/api/pdf/merge/"
+            "pdf_merge":"/api/pdfs/merge/",
+            "test": "/api/pdfs/test/"
         }
     })
 
@@ -43,10 +43,10 @@ urlpatterns = [
     path('api/pdfs/', pdf_api, name='any'),
     
     # PDF API endpoints
-    path('api/pdf/', include('pdf.urls')),
+    path('api/pdfs/', include('pdf.urls')),
 
 ]
 
 # Serve media files in development
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)    

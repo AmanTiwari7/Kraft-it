@@ -1,8 +1,6 @@
 # streamlit_app/pages/1_Merge_PDFs.py
 import streamlit as st
 import requests
-from pathlib import Path
-import io
 
 st.set_page_config(page_title="Merge PDFs", page_icon="🔗", layout="wide")
 
@@ -53,27 +51,24 @@ if uploaded_files:
                     # For now, just show a placeholder
                     
                     # Example API call (uncomment when backend is ready):
-                    # files = [('files', (file.name, file, 'application/pdf')) 
-                    #          for file in uploaded_files]
-                    # response = requests.post(
-                    #     'http://localhost:8000/api/merge',
-                    #     files=files
-                    # ) 
+                    files = [('files', (file.name, file, 'application/pdf')) 
+                             for file in uploaded_files]
+                    response = requests.post(
+                        'http://localhost:8000/api/pdfs/merge/',
+                        files=files
+                    ) 
                     
-                    st.success("✅ PDFs merged successfully!")
-                    
-                    st.info("🔧 Backend API integration coming soon...")
-                    
-                    # Placeholder download button
-                    st.download_button(
-                        label="📥 Download Merged PDF",
-                        data=b"",  # Will contain actual PDF data from backend
-                        file_name="merged_output.pdf",
-                        mime="application/pdf",
-                        disabled=True,  # Enable when backend is ready
-                        help="Backend integration in progress"
-                    )
-                    
+                    if response.status_code == 200:
+                        st.success("✅ PDFs merged successfully!")
+                        st.download_button(
+                            label="📥 Download Merged PDF",
+                            data=response.content,
+                            file_name="merged_output.pdf",
+                            mime="application/pdf"
+                        )
+                    else:
+                        st.error("❌ Failed to merge PDFs.")
+                                            
                 except Exception as e:
                     st.error(f"❌ Error: {str(e)}")
 else:
