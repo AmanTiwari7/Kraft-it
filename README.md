@@ -1,4 +1,4 @@
-<img width="876" height="865" alt="image" src="https://github.com/user-attachments/assets/dab83727-092d-4ac7-b83a-bffa130f798d" />
+<img width="876" height="865" alt="image" src="https://github.com/user-attachments/assets/657ebe4c-8c90-490c-941c-54d526bc03f7" />
 
 # 📄 Kraft-it - Complete PDF Manipulation Toolkit
 
