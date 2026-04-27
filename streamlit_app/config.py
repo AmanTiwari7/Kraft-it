@@ -28,6 +28,8 @@ API_ENDPOINTS = {
     "compress": f"{BACKEND_URL}/api/compress",
     "convert": f"{BACKEND_URL}/api/convert",
     "history": f"{BACKEND_URL}/api/history",
+    "chat_upload": f"{BACKEND_URL}/api/chat/upload",
+    "chat_ask": f"{BACKEND_URL}/api/chat/ask",
 }
 
 # ============================================

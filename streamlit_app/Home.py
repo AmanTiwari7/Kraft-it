@@ -177,6 +177,17 @@ with col4:
     if st.button("🔄 Go to Convert Files", key="nav_convert", use_container_width=True):
         st.switch_page("pages/4_Convert_Files.py")
 
+with col5:
+    st.markdown("""
+    <div class="feature-card card-teal">
+        <h3>💬 Chat with PDF</h3>
+        <p>Upload a PDF and ask questions about its content using AI. Get instant answers.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    if st.button("💬 Go to Chat", key="nav_chat", use_container_width=True):
+        st.switch_page("pages/6_Chat_with_PDF.py")
+
 st.markdown("---")
 
 # How to use section
