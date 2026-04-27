@@ -71,7 +71,7 @@ def     start_frontend():
     
     # Streamlit has its own auto-reload built-in
     proc = subprocess.Popen([
-        "streamlit",
+        "python", "-m", "streamlit",
         "run",
         "streamlit_app/Home.py",
         "--server.port", port,
