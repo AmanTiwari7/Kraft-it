@@ -61,16 +61,16 @@ with col1:
                 try:
                     # TODO: Send PDF to backend API for processing
                     # Example backend call:
-                    # files = {'file': (uploaded_file.name, uploaded_file, 'application/pdf')}
-                    # response = requests.post(
-                    #     'http://localhost:8000/api/chat/upload/',
-                    #     files=files
-                    # )
-                    # if response.status_code == 200:
-                    #     st.session_state.pdf_processed = True
-                    #     st.success("✅ PDF processed successfully!")
-                    # else:
-                    #     st.error("Failed to process PDF")
+                    files = {'file': (uploaded_file.name, uploaded_file, 'application/pdf')}
+                    response = requests.post(
+                        'http://localhost:8000/api/chat/upload/',
+                        files=files
+                    )
+                    if response.status_code == 200:
+                        st.session_state.pdf_processed = True
+                        st.success("✅ PDF processed successfully!")
+                    else:
+                        st.error("Failed to process PDF")
                     
                     # For now, just mark as processed (simulate)
                     st.session_state.pdf_processed = True
